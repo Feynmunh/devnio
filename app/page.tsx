@@ -289,7 +289,7 @@ export default function Home() {
             </h1>
             <pre
               aria-hidden="true"
-              className="font-['Courier_New','Courier',monospace] text-teal-400 overflow-x-auto leading-[1.2] whitespace-pre text-[0.65rem] sm:text-[0.85rem] md:text-[1rem] lg:text-[1.1rem]"
+              className="font-['Courier_New','Courier',monospace] text-teal-400 w-full max-w-full overflow-hidden leading-[1.2] whitespace-pre text-[clamp(0.34rem,1.25vw,1.1rem)]"
             >
               {heroAscii}
             </pre>
