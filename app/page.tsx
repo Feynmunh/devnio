@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Squares from "./sqaures";
 import { ThemeToggle } from "@/components/theme-toggle";
+import MobileNav from "@/components/mobile-nav";
 import { useEffect, useState } from "react";
 import { 
   ThreeDScrollTriggerContainer, 
@@ -269,11 +270,14 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <Link
               href="/contact"
-              className={ctaClasses}
+              className={`${ctaClasses} hidden sm:flex`}
             >
               <span className="text-[0.5rem]">●</span> START A PROJECT
             </Link>
-            <ThemeToggle />
+            <div className="hidden sm:block">
+              <ThemeToggle />
+            </div>
+            <MobileNav links={navLinks} isDark={isDark} />
           </div>
         </nav>
       </header>
